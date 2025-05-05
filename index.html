@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio | Adrián Torres</title>
+  <style>
+    :root {
+      --baby-blue: #a2d5f2;
+      --gray: #3a3a3a;
+      --light-gray: #f4f7f9;
+      --hover-blue: #7ccce0;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/cartographer.png') repeat;
+      background-color: var(--light-gray);
+      color: var(--gray);
+    }
+
+    header {
+      background-color: var(--baby-blue);
+      padding: 2.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--gray);
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      background-color: var(--gray);
+      color: var(--white);
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .buttons a:hover {
+      background-color: var(--hover-blue);
+      color: var(--gray);
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--gray);
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      min-height: 300px;
+    }
+
+    .project-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project {
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.4s ease, background-color 0.3s ease;
+      animation: fadeIn 1s ease both;
+      width: fit-content;
+      max-width: 320px;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      background-color: var(--baby-blue);
+    }
+
+    .project h3 {
+      margin-top: 0.5rem;
+      color: var(--gray);
+      font-size: 1.1rem;
+    }
+
+    .project p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .project-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .project-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #3a3a3a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .project {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1 style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: aliceblue;">Adrián Torres</h1>
+    <p style="font-weight: bold;">Ciencias de la Tierra | Análisis de datos | SIG | Modelado ecológico | Biotecnología</p>
+    <div class="buttons">
+      <a href="https://github.com/adriantorresl" target="_blank">Ver GitHub</a>
+      <a href="mailto:adriantorresledezma01@gmail.com">Contáctame</a>
+    </div>
+  </header>
+
+  <section id="proyectos">
+    <h2>🌎 Proyectos Destacados</h2>
+    <div class="projects">
+
+      <a href="projects/Monterrey Basin Visualization/nl-3d-elevation-rivers.png" class="project-link" target="_blank">
+        <div class="project">
+          <div class="project-icon">
+            💧
+          </div>
+          <h3>Modelado de flujo hidrológico</h3>
+          <p>Visualización 3D de cuencas en el Área Metropolitana de Monterrey con RStudio.</p>
+        </div>
+      </a>
+
+      <a href="projects/Bivariate Visualization/nl-bivariate-3d.png" class="project-link" target="_blank">
+        <div class="project">
+          <div class="project-icon">
+            🌧️
+          </div>
+          <h3>Mapa Bivariado de Nuevo León</h3>
+          <p>Visualización de temperatura vs precipitación en el estado de Nuevo León 1981-2010.</p>
+        </div>
+      </a>
+
+      <a href="projects/Flood Risk/RiesgoInundaciónMty.html" class="project-link" target="_blank">
+        <div class="project">
+          <div class="project-icon">
+            🌊
+          </div>
+          <h3>Mapa de Riesgo por Inundación</h3>
+          <p>Mapa interactivo del riesgo por inundación en el Área Metropolitana de Monterrey.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <p style="text-align: center; color: white; margin-top: 3rem;">
+      Más proyectos próximamente...
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Adrián Torres Ledezma. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
